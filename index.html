@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Renolit Banner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="#" onclick="window.open(getParameter('clickTag'), '_blank'); return false">
+    <div class="wrapper">
+      <!-- slide-1 -->
+      <div id="scene1" class="mySlides first">
+        <div class="products slideProd"></div>
+        <div class="background"></div>
+      </div>
+      <!-- slide-2 -->
+      <div id="scene2" class="mySlides second">
+        <div class="products prod"></div>
+        <div class="cta"></div>
+        <div class="logo"></div>
+        <div class="headline"></div>
+        <div class="background bg"></div>
+      </div>
+    </div>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    function getParameter(name)
+      {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i=0;i<vars.length;i++)
+      {
+        var itm = vars[i].split("=");
+        if(itm[0] == name){return decodeURIComponent(itm[1]);}
+      }
+      return '';
+      }
+  </script>
+</body>
+</html>
